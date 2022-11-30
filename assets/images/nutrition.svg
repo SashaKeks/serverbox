@@ -1,0 +1,17 @@
+<svg width="20" height="26" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;" stroke="null">
+
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <rect style="vector-effect: non-scaling-stroke;" stroke="#000" id="svg_13" height="0" width="8.00003" y="99.33526" x="597.33404" stroke-width="3" fill="none"/>
+  <rect style="vector-effect: non-scaling-stroke;" stroke="#000" id="svg_23" height="0" width="10.6667" y="670.00396" x="641.33419" stroke-width="3" fill="none"/>
+  <path id="svg_255" d="m3.79699,7.5188" opacity="NaN" stroke="#000" fill="none"/>
+  <path id="svg_261" d="m-149.39322,-5.95489c-20.67668,4.51128 -18.42105,12.03008 -18.45866,11.65413c0.03761,0.37594 39.13535,-16.16541 18.45866,-11.65413z" opacity="NaN" stroke="#000" fill="none"/>
+  <path id="svg_263" d="m-150.26543,-5.57895c-22.18044,2.25564 -21.42856,7.5188 -21.46617,7.14286c0.03761,0.37594 16.57896,0 16.54135,-0.37594c0.03761,0.37594 27.10527,-9.02256 4.92482,-6.76692z" opacity="NaN" stroke="#000" fill="none"/>
+  <g stroke="null" id="svg_276">
+   <path stroke="#000" stroke-width="3" id="svg_269" d="m17.28949,23.27034l-7.70676,0l0,0c-4.25638,0 -7.70679,-4.70517 -7.70679,-10.50924c0,-5.80409 3.45041,-10.50921 7.70679,-10.50921l7.70676,0l0,21.01846z" fill="none"/>
+   <line stroke="#000" stroke-width="3" id="svg_270" y2="12.73659" x2="9.7964" y1="12.73659" x1="5.13731" fill="none"/>
+   <line stroke="#000" stroke-width="3" id="svg_274" y2="6.43105" x2="14.70071" y1="6.43105" x1="10.04162" fill="none"/>
+   <line stroke="#000" stroke-width="3" id="svg_275" y2="18.69182" x2="14.70071" y1="18.69182" x1="10.04162" fill="none"/>
+  </g>
+ </g>
+</svg>
