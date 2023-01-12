@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'dart:math' as math show sin, pi;
-import 'package:flutter/animation.dart';
 
 class SpinKitFadingCircle extends StatefulWidget {
   const SpinKitFadingCircle({
@@ -23,6 +22,7 @@ class SpinKitFadingCircle extends StatefulWidget {
   final AnimationController? controller;
 
   @override
+  // ignore: library_private_types_in_public_api
   _SpinKitFadingCircleState createState() => _SpinKitFadingCircleState();
 }
 
@@ -68,10 +68,10 @@ class _SpinKitFadingCircleState extends State<SpinKitFadingCircle>
         size: Size.square(widget.size),
         child: Stack(
           children: List.generate(12, (i) {
-            final _position = widget.size * .5;
+            final position = widget.size * .5;
             return Positioned.fill(
-              left: _position,
-              top: _position,
+              left: position,
+              top: position,
               child: Transform(
                 transform: Matrix4.rotationZ(30.0 * i * 0.0174533),
                 child: Align(

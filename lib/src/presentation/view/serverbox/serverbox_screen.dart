@@ -10,9 +10,9 @@ class ServerBoxScreen extends StatelessWidget {
     final id = context.read<ServerBoxCubit>().toString();
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
+        title: Text(id),
       ),
-      body: Text("123"),
+      body: const Text("123"),
     );
   }
 }

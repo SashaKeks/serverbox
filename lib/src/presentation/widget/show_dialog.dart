@@ -36,5 +36,4 @@ Future enterName(BuildContext context,
           ),
         );
       });
-  ;
 }

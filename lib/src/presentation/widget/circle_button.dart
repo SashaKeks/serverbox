@@ -6,9 +6,11 @@ class CircleButton extends StatelessWidget {
   final Color? pForegroundColor;
   final Color? pColor;
   final double? pSize;
-  const CircleButton({
+  void Function()? onTap;
+  CircleButton({
     super.key,
     required this.pIcon,
+    required this.onTap,
     this.pBgColor,
     this.pForegroundColor,
     this.pColor,
@@ -18,7 +20,7 @@ class CircleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onTap,
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
         padding: const EdgeInsets.all(15),

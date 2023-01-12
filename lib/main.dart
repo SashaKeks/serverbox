@@ -3,6 +3,7 @@ import 'package:serverbox/src/config/navigation/main_navigation.dart';
 import 'package:serverbox/src/config/navigation/navigation_names.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const App());
 }
 
@@ -17,7 +18,7 @@ class App extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: NavigationNames.serverboxList,
+      initialRoute: NavigationNames.menuScreenName,
       routes: MainNavigation.routes,
       onGenerateRoute: MainNavigation.onGenerateRoute,
     );

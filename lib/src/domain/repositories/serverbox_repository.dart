@@ -1,6 +1,5 @@
 import 'package:serverbox/src/core/resources/data_state.dart';
 import 'package:serverbox/src/data/local/serverbox_local_datasource.dart';
-import 'package:serverbox/src/domain/entities/network_equipment.dart';
 import 'package:serverbox/src/domain/entities/server_box.dart';
 
 class ServerBoxRepository {

@@ -12,22 +12,22 @@ class LoaderScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text(
-              "Please, wait",
+            const Text(
+              "Please, wait ...",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 200,
             ),
             Column(
               children: [
                 SpinKitFadingCircle(
                   itemBuilder: (BuildContext context, int index) {
-                    return DecoratedBox(
+                    return const DecoratedBox(
                       decoration: BoxDecoration(
                           color: Color.fromARGB(255, 205, 86, 0),
                           borderRadius: BorderRadius.all(Radius.circular(100))),
@@ -35,10 +35,10 @@ class LoaderScreen extends StatelessWidget {
                   },
                   size: 80,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Text(
+                const Text(
                   "Connecting",
                   style: TextStyle(
                       color: Color.fromARGB(255, 205, 86, 0), fontSize: 25.0),
