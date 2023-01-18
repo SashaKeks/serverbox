@@ -11,7 +11,8 @@ class MainNavigation {
     // NavigationNames.loginScreenName: (context) => const LoginScreen(),
     // NavigationNames.registartionScreenName: (context) =>
     //     const RegistrationScreen(),
-    NavigationNames.constructorList: (context) => const ConstructorListScreen(),
+    NavigationNames.constructorList: (context) =>
+        ScreenFactory.createConstructorList(),
     NavigationNames.addToConstructor: (context) => const AddToConstructor(),
     NavigationNames.constructorNA: (context) =>
         ScreenFactory.createNaConstructor(),

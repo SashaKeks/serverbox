@@ -18,7 +18,7 @@ class SqlManager {
     final tables = await database.rawQuery(
         'SELECT name FROM sqlite_master WHERE type=? AND name=?',
         ['table', tableName]);
-    database.close();
+    await database.close();
     return tables.isNotEmpty;
   }
 
@@ -30,7 +30,7 @@ class SqlManager {
         'CREATE TABLE ${AppConstans.serverboxesTable} (id INTEGER PRIMARY KEY, name TEXT)',
       );
     }
-    database.close();
+    await database.close();
   }
 
   Future<void> _initConstructorTable() async {
@@ -41,6 +41,6 @@ class SqlManager {
         'CREATE TABLE ${AppConstans.constructorTable} (id INTEGER PRIMARY KEY, name TEXT, type TEXT)',
       );
     }
-    database.close();
+    await database.close();
   }
 }

@@ -16,4 +16,14 @@ class ConstructorLocalDataSource {
         .map((element) => NetworkEquipment.fromMap(element))
         .toList();
   }
+
+  Future<void> addNetworkEquipmentinConstructor(
+      NetworkEquipment networkEquipment) async {
+    final database = await databaseManager.getDB();
+    await database.insert(
+      AppConstans.constructorTable,
+      networkEquipment.toMap(),
+    );
+    database.close();
+  }
 }

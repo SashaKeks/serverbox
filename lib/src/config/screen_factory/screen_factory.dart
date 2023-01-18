@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:serverbox/src/presentation/bloc/constructor/constructor_main_cubit.dart';
+import 'package:serverbox/src/presentation/bloc/constructor/constructor_list_cubit.dart';
 import 'package:serverbox/src/presentation/bloc/constructor/constructotr_cubit.dart';
 import 'package:serverbox/src/presentation/bloc/menu_bloc/menu_cubit.dart';
 import 'package:serverbox/src/presentation/bloc/serverbox_bloc/serverbox_cubit.dart';
@@ -18,9 +18,9 @@ class ScreenFactory {
     );
   }
 
-  static Widget createConstructorMain() {
+  static Widget createConstructorList() {
     return BlocProvider(
-      create: (context) => ConstructorMainCubit(),
+      create: (context) => ConstructorListCubit(),
       child: const ConstructorListScreen(),
     );
   }

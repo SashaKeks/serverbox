@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:serverbox/src/presentation/bloc/constructor/constructor_list_cubit.dart';
 
 class ConstructorListScreen extends StatelessWidget {
   const ConstructorListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final state = context.watch<ConstructorListCubit>().state;
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Constructor',
+          'Constructor List',
         ),
       ),
       body: ListView.builder(
-        itemCount: 1,
+        itemCount: state.netEquipment.length,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(8.0),

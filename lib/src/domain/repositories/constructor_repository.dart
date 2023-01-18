@@ -15,6 +15,10 @@ class ConstructorRepository {
     }
   }
 
+  Future<void> addNetworkEquipmentInConstructor(
+      NetworkEquipment networkEquipment) async {
+    constructorDatasource.addNetworkEquipmentinConstructor(networkEquipment);
+  }
   // Future<DataState<List<NetworkEquipment>>> getAllPortEtalons(){};
 
   // Future<DataState<NetworkEquipment>> getNetworkEquipmentEtalonById(
