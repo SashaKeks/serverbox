@@ -18,7 +18,7 @@ class App extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: NavigationNames.menuScreenName,
+      initialRoute: NavigationNames.constructorList,
       routes: MainNavigation.routes,
       onGenerateRoute: MainNavigation.onGenerateRoute,
     );

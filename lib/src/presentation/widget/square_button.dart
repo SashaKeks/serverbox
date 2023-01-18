@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CircleButton extends StatelessWidget {
+class SquareButton extends StatelessWidget {
   final IconData pIcon;
   final Color? pBgColor;
   final Color? pForegroundColor;
   final Color? pColor;
   final double? pSize;
+  final double? width;
+  final double? height;
   void Function()? onTap;
-  CircleButton({
+  SquareButton({
     super.key,
     required this.pIcon,
     required this.onTap,
@@ -15,6 +17,8 @@ class CircleButton extends StatelessWidget {
     this.pForegroundColor,
     this.pColor,
     this.pSize,
+    this.width,
+    this.height,
   });
 
   @override
@@ -22,7 +26,7 @@ class CircleButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
-        shape: const CircleBorder(),
+        fixedSize: Size(width ?? 100, height ?? 100),
         padding: const EdgeInsets.all(15),
         backgroundColor: pBgColor ?? Colors.amber[800],
         foregroundColor: pForegroundColor ?? Colors.black,

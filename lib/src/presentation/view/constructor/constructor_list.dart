@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-class ConstructorMainScreen extends StatelessWidget {
-  const ConstructorMainScreen({super.key});
+class ConstructorListScreen extends StatelessWidget {
+  const ConstructorListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Constructor',
+        ),
+      ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: 1,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(8.0),
@@ -39,20 +44,18 @@ class ConstructorMainScreen extends StatelessWidget {
                 ],
               ),
               child: ListTile(
-                // shape: Border.all(
-                //   color: Colors.white,
-                // ),
                 leading: const CircleAvatar(
                   backgroundColor: Colors.white,
                 ),
-                title: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                title: const Padding(
+                  padding: EdgeInsets.all(20.0),
                   child: Text(
                     'Some',
-                    style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 onTap: () {},
@@ -65,6 +68,12 @@ class ConstructorMainScreen extends StatelessWidget {
             ),
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+        ),
       ),
     );
   }

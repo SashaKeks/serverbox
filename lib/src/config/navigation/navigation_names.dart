@@ -1,11 +1,16 @@
 class NavigationNames {
+  //loader
   static const String loaderScreenName = '/';
-  static const String menuScreenName = '/menu';
+  //auth
   static const String loginScreenName = '/login';
   static const String registartionScreenName = '/registration';
-  static const String constructor = '/menu/constructor';
-  static const String createNewNA = '/menu/constructor/creator';
+  //menu
+  static const String menuScreenName = '/menu';
+  //constructor
+  static const String constructorList = '/menu/constructor_list';
+  static const String constructorNA = '/menu/constructor_list/creator';
   static const String addToConstructor = '/menu/constructor/add';
+  //serverBox
   static const String serverboxList = '/menu/serverbox_list';
   static const String serverbox = '/menu/serverbox_list/serverbox';
 }

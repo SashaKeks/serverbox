@@ -23,7 +23,7 @@ class ServerBoxRepository {
   }
 
   void editServerboxName({required ServerBox newServerBox}) {
-    serverboxDatasource.editServerboxName(newServerBox: newServerBox);
+    serverboxDatasource.changeServerboxName(newServerBox: newServerBox);
   }
 
   // Future<DataState<ServerBox>> addNetworkEquipmentInServerBox(

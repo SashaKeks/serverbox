@@ -7,15 +7,15 @@ class NetworkEquipment {
   final int id;
   final String name;
   final String type;
-  final String description;
-  final List<Ports> ports;
+  final String? description;
+  final List<Ports>? ports;
 
   NetworkEquipment({
     required this.id,
     required this.name,
     required this.type,
     this.description = '',
-    required this.ports,
+    this.ports,
   });
 
   NetworkEquipment copyWith({
@@ -40,7 +40,6 @@ class NetworkEquipment {
       'name': name,
       'type': type,
       'description': description,
-      'ports': ports.map((x) => x.toMap()).toList(),
     };
   }
 
@@ -50,11 +49,6 @@ class NetworkEquipment {
       name: map['name'] as String,
       type: map['type'] as String,
       description: map['description'] as String,
-      ports: List<Ports>.from(
-        (map['ports'] as List<int>).map<Ports>(
-          (x) => Ports.fromMap(x as Map<String, dynamic>),
-        ),
-      ),
     );
   }
   @override

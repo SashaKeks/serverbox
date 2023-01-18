@@ -1,18 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:serverbox/src/presentation/bloc/constructor_bloc/constructotr_cubit.dart';
 import 'package:serverbox/src/presentation/widget/background_grid.dart';
 
 class NAConstructor extends StatelessWidget {
   const NAConstructor({super.key});
-
-  static Widget create() {
-    return BlocProvider(
-      create: (context) => ConstructorCubit(),
-      child: const NAConstructor(),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     // double width = MediaQuery.of(context).size.width;

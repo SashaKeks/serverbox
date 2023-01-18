@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:serverbox/src/presentation/bloc/menu_bloc/menu_cubit.dart';
 import 'package:serverbox/src/presentation/view/serverbox_list/serverbox_list_screen.dart';
-import 'package:serverbox/src/presentation/widget/circle_button.dart';
+import 'package:serverbox/src/presentation/widget/square_button.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     final controlPage = PageController();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -43,10 +43,10 @@ class MenuScreen extends StatelessWidget {
             Icons.home_outlined,
           ),
           Icon(
-            Icons.list_alt_outlined,
+            Icons.settings_outlined,
           ),
           Icon(
-            Icons.settings_outlined,
+            Icons.info_outline,
           ),
         ],
         onTap: (index) {
@@ -69,30 +69,46 @@ class HomeScreen extends StatelessWidget {
         const SizedBox(
           height: 40,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            CircleButton(
-              pIcon: Icons.info_outline,
-              pBgColor: Colors.white,
-              onTap: () {},
-            ),
-            CircleButton(
-              pIcon: Icons.share_outlined,
-              pBgColor: Colors.white,
-              onTap: () {},
-            ),
-            CircleButton(
-              pIcon: Icons.create_new_folder_outlined,
-              pBgColor: Colors.white,
-              onTap: () {
-                Navigator.of(context).pushNamed('');
-              },
-            ),
-          ],
+        SizedBox(
+          width: double.infinity,
+          height: 300,
+          child: Wrap(
+            runSpacing: 10.0,
+            spacing: 10.0,
+            direction: Axis.vertical,
+            children: [
+              SquareButton(
+                width: 200,
+                height: 300,
+                pIcon: Icons.list_alt_outlined,
+                pBgColor: Colors.white,
+                onTap: () {},
+              ),
+              SquareButton(
+                width: 200,
+                height: 190,
+                pIcon: Icons.create_new_folder_outlined,
+                pBgColor: Colors.white,
+                onTap: () {},
+              ),
+              SquareButton(
+                width: 200,
+                pIcon: Icons.share,
+                pBgColor: Colors.white,
+                onTap: () {},
+              ),
+            ],
+          ),
+        ),
+        Divider(
+          color: Colors.white,
         ),
         const Padding(
-          padding: EdgeInsets.all(30.0),
+          padding: EdgeInsets.only(
+            left: 10.0,
+            top: 30.0,
+            bottom: 20.0,
+          ),
           child: Text(
             'Resently used',
             style: TextStyle(
@@ -101,9 +117,9 @@ class HomeScreen extends StatelessWidget {
         ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 35),
             child: ListView.builder(
-              itemCount: 10,
+              itemCount: 3,
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: const CircleAvatar(
