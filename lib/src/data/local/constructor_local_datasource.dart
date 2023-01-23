@@ -3,15 +3,15 @@ import 'package:serverbox/src/data/local/sql_manager.dart';
 import 'package:serverbox/src/domain/entities/network_equipment.dart';
 
 class ConstructorLocalDataSource {
-  final databaseManager = SqlManager();
+  final _databaseManager = SqlManager();
 
   Future<List<NetworkEquipment>> getAllNetworkEquipmentFromConstructor() async {
-    final database = await databaseManager.getDB();
-    List<Map<String, dynamic>> networkEquipment = await database.query(
+    final database = await _databaseManager.getDB();
+    final List<Map<String, dynamic>> networkEquipment = await database.query(
       AppConstans.constructorTable,
     );
+    await database.close();
 
-    database.close();
     return networkEquipment
         .map((element) => NetworkEquipment.fromMap(element))
         .toList();
@@ -19,11 +19,11 @@ class ConstructorLocalDataSource {
 
   Future<void> addNetworkEquipmentinConstructor(
       NetworkEquipment networkEquipment) async {
-    final database = await databaseManager.getDB();
+    final database = await _databaseManager.getDB();
     await database.insert(
       AppConstans.constructorTable,
       networkEquipment.toMap(),
     );
-    database.close();
+    await database.close();
   }
 }
